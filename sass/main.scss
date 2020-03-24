@@ -1,0 +1,404 @@
+///////////////////////////////////////////////////
+//   Variable declaration Starts here
+///////////////////////////////////////////////////
+$orange: #fd971d;
+$light-orange: #ffd6b5;
+$pink: #fcb5b5;
+$light-pink: #fff3ea;
+$teal: #bdf2d5;
+$light-teal: #f5fdf9;
+$red: #fd6754;
+$light-gray: #f9f6f7;
+$dark-1: #1e242d;
+$dark-2: #5f6369;
+
+///////////////////////////////////////////////////
+//   Base Styling Starts here
+///////////////////////////////////////////////////
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+///////////////////////////////////////////////////
+//   Main Styling Starts here
+///////////////////////////////////////////////////
+
+
+///////////////////////////
+//   NAVIGATION STYLING
+///////////////////////////
+nav{
+    padding: 10px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 38px;
+        }
+
+        .logo-text{
+            color: $orange;
+            font-size: 1.8rem;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+    }
+
+    .nav-links{
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        li{
+
+            a{
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: $dark-1;
+                font-weight: 500;
+                letter-spacing: 1px;
+                padding: 22px 0;
+            }
+
+            a.btn{
+                display: inline-block;
+                padding: 22px 45px;
+                background-color: $light-pink;
+                text-transform: uppercase;
+                border-radius: 2.65rem;
+                color: $orange;
+            }
+
+            a.current{
+                border-bottom: 1px solid
+                $orange;
+            }
+        }
+
+        li:not(:last-of-type){
+            margin-right: 2.2rem;
+        }
+    }
+}
+
+
+///////////////////////////
+//   HEADER STYLING
+///////////////////////////
+
+header{
+    display: grid;
+    margin-top: 28px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 445px;
+
+    .column-2::before{
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        background-image: url(../img/smile.svg);
+        background-size: 15px;
+        transform: translateX(-50%);
+        bottom: 10%;
+    }
+
+    .column-1{
+        background-image: url(../img/header-col-1-bg.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .description{
+            padding: 0 134px;
+
+            h1{
+                font-size: 2.4rem;
+                color: $dark-1;
+                line-height: 1.2;
+                margin-bottom: 2rem;
+                letter-spacing: 2px;
+            }
+            .lead{
+                color: $dark-2;
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            .btn{
+                margin-top: 2rem;
+                padding: 10px 20px;
+                border-radius: 2.65rem;
+                background-color: $light-orange;
+                color: $orange;
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+
+
+                i{
+                    background-color: #fff;
+                    padding: 10px;
+                    border-radius: 50%;
+                    margin-left: -10px;
+                }
+
+                .text{
+                    margin-left: 10px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    .column-2{
+        background-image: url(../img/header-col-2-bg.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+        img{
+            position: absolute;
+            left: 50px;
+            bottom: -9px;
+            height: 90%;
+        }
+    }
+}
+
+///////////////////////////
+//   HOW WE HELP STYLING
+///////////////////////////
+
+.how-we-help{
+    margin-top: 105px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 534px;
+
+    .column-1{
+        background-image: url(../img/how-we-help-col-1-bg.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .column-2{
+        padding: 10px 135px;
+        
+        h1{
+            font-size: 2.4rem;
+            color: $dark-1;
+            line-height: 1.2;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .paragraph{
+            color: $dark-2;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        .paragraph:not(:last-of-type){
+            margin-bottom: 32px;
+        }
+
+        .btn{
+            margin-top: 33px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.3rem;
+            padding: 22px 45px;
+            background-color: $light-pink;
+            text-transform: uppercase;
+            border-radius: 2.65rem;
+            font-weight: 700;
+            color: $orange;
+        }
+    }
+}
+
+/////////////////////////////////
+//   SERVICES SECTION STYLING
+/////////////////////////////////
+
+.services-section{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 570px;
+    grid-template-areas: 
+        "s-header s-header"
+        "column-1 column-2";
+
+    .services-hearder{
+        grid-area: s-header;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1{
+            font-size: 2.4rem;
+            color: $dark-1;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .services{
+            display: flex;
+            padding-bottom: 45px;
+
+            .service{
+                list-style: none;
+
+                a{
+                    text-decoration: none;
+                    color: $dark-2;
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                }
+
+                .active{
+                    border-bottom: 1px solid $orange;
+                }
+            }
+
+            .service:not(:last-of-type){
+                margin-right: 80px;
+            }
+        }
+    }
+
+    .column-1::before{
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        background-image: url(../img/big-smile.svg);
+        background-size: 15px;
+        bottom: 10%;
+        left: 33%;
+    }
+
+    .column-1{
+        grid-area: column-1;
+        background-image: url(../img/services-col-1-bg.svg);
+        background-position: right;
+        background-repeat: no-repeat;
+        position: relative;
+        
+        img{
+            position: absolute;
+            right: 50px;
+            bottom: 0;
+        }
+    }
+
+    .column-2{
+        grid-area: column-2;
+        padding: 10px 135px;
+        
+        h1{
+            font-size: 2.4rem;
+            color: $dark-1;
+            line-height: 1.2;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .paragraph{
+            color: $dark-2;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+
+        ul{
+            li{
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                div::before{
+                    content: "";
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    border: 2px solid $orange;
+                    top: 1px;
+                    left: -3px;
+                    position: absolute;
+                }
+
+                div{
+                    display: flex;
+                    margin-right: 25px;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    background-color: $light-pink;
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+
+                    p{
+                        font-weight: 700;
+                        font-size: 1.3rem;
+                        color: $orange;
+                    }
+                }
+                
+
+                p{
+                    color: $dark-2;
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                    line-height: 1.4;
+                }
+            }
+
+            li:not(:last-of-type){
+                margin-bottom: 25px;
+            }
+
+        }
+
+        .btn{
+            margin-top: 33px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.3rem;
+            padding: 22px 45px;
+            background-color: $light-pink;
+            text-transform: uppercase;
+            border-radius: 2.65rem;
+            font-weight: 700;
+            color: $orange;
+        }
+    }
+}

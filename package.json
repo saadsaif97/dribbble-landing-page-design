@@ -1,0 +1,14 @@
+{
+  "name": "dribbble-landing-page-design",
+  "version": "1.0.0",
+  "description": "Landing page design for practice",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass/ -o dist/css --recursive"
+  },
+  "author": "Saad Saif",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
