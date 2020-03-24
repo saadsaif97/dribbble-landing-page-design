@@ -175,8 +175,10 @@ header {
           text-decoration: none;
           color: #5f6369;
           font-size: 1.5rem;
-          letter-spacing: 1px; }
+          letter-spacing: 1px;
+          padding-bottom: 40px; }
         .services-section .services-hearder .services .service .active {
+          color: #1e242d;
           border-bottom: 1px solid #fd971d; }
       .services-section .services-hearder .services .service:not(:last-of-type) {
         margin-right: 80px; }
@@ -259,3 +261,81 @@ header {
       border-radius: 2.65rem;
       font-weight: 700;
       color: #fd971d; }
+
+.our-partners-section {
+  margin-top: 125px;
+  width: 100vw;
+  background-color: #f9f6f7;
+  padding-bottom: 85px; }
+  .our-partners-section .sec-hearder {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 235px;
+    padding: 0 72px;
+    grid-gap: 72px; }
+    .our-partners-section .sec-hearder .title p {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #5f6369; }
+    .our-partners-section .sec-hearder .title h1 {
+      font-size: 2.4rem;
+      color: #1e242d;
+      line-height: 1.2;
+      margin-top: 2rem; }
+    .our-partners-section .sec-hearder .description {
+      color: #5f6369;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      line-height: 1.4; }
+    .our-partners-section .sec-hearder .btn {
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.3rem;
+      padding: 22px 45px;
+      background-color: #fff3ea;
+      text-transform: uppercase;
+      border-radius: 2.65rem;
+      font-weight: 700;
+      color: #fd971d; }
+  .our-partners-section .partners {
+    margin: 10px 72px 0 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px; }
+    .our-partners-section .partners .partner {
+      background-color: #fff;
+      padding: 45px; }
+      .our-partners-section .partners .partner h1 {
+        font-size: 2.4rem;
+        letter-spacing: 1px;
+        color: #1e242d;
+        line-height: 1.2;
+        margin-bottom: 2rem; }
+      .our-partners-section .partners .partner p {
+        color: #5f6369;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.4; }
+      .our-partners-section .partners .partner .btn {
+        margin-top: 2rem;
+        padding: 10px 20px;
+        border-radius: 2.65rem;
+        background-color: #ffd6b5;
+        color: #fd971d;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none; }
+        .our-partners-section .partners .partner .btn i {
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 50%;
+          margin-left: -10px; }
+        .our-partners-section .partners .partner .btn .text {
+          margin-left: 10px;
+          text-transform: uppercase;
+          font-weight: 700;
+          letter-spacing: 1px; }
