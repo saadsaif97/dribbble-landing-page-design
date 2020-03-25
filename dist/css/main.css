@@ -7,7 +7,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; }
 
 nav {
   padding: 10px 72px;
@@ -48,11 +49,10 @@ nav {
       margin-right: 2.2rem; }
 
 header {
-  width: 100vw;
   display: grid;
   margin-top: 28px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: max-content; }
+  grid-template-rows: auto; }
   header .column-2::before {
     content: "";
     width: 70px;
@@ -71,7 +71,7 @@ header {
     align-items: center;
     justify-content: center; }
     header .column-1 .description {
-      padding: 0 134px; }
+      padding: 0 72px; }
       header .column-1 .description h1 {
         font-size: 2.4rem;
         color: #1e242d;
@@ -107,23 +107,22 @@ header {
     background-repeat: no-repeat;
     position: relative; }
     header .column-2 img {
-      left: 0px;
-      bottom: 0px;
-      width: 30vw;
-      height: auto; }
+      position: relative;
+      left: 50px;
+      bottom: -15px; }
 
 .how-we-help {
   margin-top: 105px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 534px; }
+  grid-template-rows: max-content; }
   .how-we-help .column-1 {
     background-image: url(../img/how-we-help-col-1-bg.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative; }
+    background-position: left center; }
   .how-we-help .column-2 {
-    padding: 10px 135px; }
+    padding: 10px 72px; }
     .how-we-help .column-2 h1 {
       font-size: 2.4rem;
       color: #1e242d;
@@ -153,7 +152,7 @@ header {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 260px 570px;
+  grid-template-rows: 260px auto;
   grid-template-areas: "s-header s-header" "column-1 column-2"; }
   .services-section .services-hearder {
     grid-area: s-header;
@@ -169,9 +168,11 @@ header {
       letter-spacing: 2px; }
     .services-section .services-hearder .services {
       display: flex;
+      justify-content: space-between;
       padding-bottom: 45px; }
       .services-section .services-hearder .services .service {
-        list-style: none; }
+        list-style: none;
+        display: inline; }
         .services-section .services-hearder .services .service a {
           text-decoration: none;
           color: #5f6369;
@@ -204,7 +205,7 @@ header {
       bottom: 0; }
   .services-section .column-2 {
     grid-area: column-2;
-    padding: 10px 135px; }
+    padding: 10px 72px; }
     .services-section .column-2 h1 {
       font-size: 2.4rem;
       color: #1e242d;
@@ -265,7 +266,6 @@ header {
 
 .our-partners-section {
   margin-top: 125px;
-  width: 100vw;
   background-color: #f9f6f7;
   padding-bottom: 85px; }
   .our-partners-section .sec-hearder {

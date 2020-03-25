@@ -28,6 +28,7 @@ html{
 
 body{
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 ///////////////////////////////////////////////////
@@ -103,11 +104,10 @@ nav{
 ///////////////////////////
 
 header{
-    width: 100vw;
     display: grid;
     margin-top: 28px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content;
+    grid-template-rows: auto;
 
     .column-2::before{
         content: "";
@@ -130,7 +130,7 @@ header{
         justify-content: center;
 
         .description{
-            padding: 0 134px;
+            padding: 0 72px;
 
             h1{
                 font-size: 2.4rem;
@@ -179,11 +179,9 @@ header{
         background-repeat: no-repeat;
         position: relative;
         img{
-            // position: absolute;
-            left: 0px;
-            bottom: 0px;
-            width: 30vw;
-            height: auto;
+            position: relative;
+            left: 50px;
+            bottom: -15px;
         }
     }
 }
@@ -196,17 +194,17 @@ header{
     margin-top: 105px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 534px;
+    grid-template-rows: max-content;
 
     .column-1{
         background-image: url(../img/how-we-help-col-1-bg.svg);
         background-size: contain;
         background-repeat: no-repeat;
-        position: relative;
+        background-position: left center;
     }
 
     .column-2{
-        padding: 10px 135px;
+        padding: 10px 72px;
         
         h1{
             font-size: 2.4rem;
@@ -250,7 +248,7 @@ header{
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 260px 570px;
+    grid-template-rows: 260px auto;
     grid-template-areas: 
         "s-header s-header"
         "column-1 column-2";
@@ -272,10 +270,12 @@ header{
 
         .services{
             display: flex;
+            justify-content: space-between;
             padding-bottom: 45px;
 
             .service{
                 list-style: none;
+                display: inline;
 
                 a{
                     text-decoration: none;
@@ -324,7 +324,7 @@ header{
 
     .column-2{
         grid-area: column-2;
-        padding: 10px 135px;
+        padding: 10px 72px;
         
         h1{
             font-size: 2.4rem;
@@ -413,7 +413,6 @@ header{
 
 .our-partners-section{
     margin-top: 125px;
-    width: 100vw;
     background-color: $light-gray;
     padding-bottom: 85px;
 
