@@ -103,10 +103,11 @@ nav{
 ///////////////////////////
 
 header{
+    width: 100vw;
     display: grid;
     margin-top: 28px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 445px;
+    grid-template-rows: max-content;
 
     .column-2::before{
         content: "";
@@ -178,10 +179,11 @@ header{
         background-repeat: no-repeat;
         position: relative;
         img{
-            position: absolute;
-            left: 50px;
-            bottom: -9px;
-            height: 90%;
+            // position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 30vw;
+            height: auto;
         }
     }
 }

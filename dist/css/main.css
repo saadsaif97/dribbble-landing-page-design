@@ -48,10 +48,11 @@ nav {
       margin-right: 2.2rem; }
 
 header {
+  width: 100vw;
   display: grid;
   margin-top: 28px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 445px; }
+  grid-template-rows: max-content; }
   header .column-2::before {
     content: "";
     width: 70px;
@@ -106,10 +107,10 @@ header {
     background-repeat: no-repeat;
     position: relative; }
     header .column-2 img {
-      position: absolute;
-      left: 50px;
-      bottom: -9px;
-      height: 90%; }
+      left: 0px;
+      bottom: 0px;
+      width: 30vw;
+      height: auto; }
 
 .how-we-help {
   margin-top: 105px;
