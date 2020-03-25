@@ -183,6 +183,12 @@ header{
             left: 50px;
             bottom: -15px;
         }
+        @media screen and (min-width: 1500px) {
+            img {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
     }
 }
 
@@ -195,6 +201,10 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: max-content;
+
+    @media screen and (min-width: 1350px) {
+       grid-template-columns: 1fr 2fr 1fr;
+    }
 
     .column-1{
         background-image: url(../img/how-we-help-col-1-bg.svg);
@@ -238,6 +248,15 @@ header{
             color: $orange;
         }
     }
+    @media screen and (min-width: 1350px) {
+        .column-3 {
+            background-image: url(../img/how-we-help-col-1-bg.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            transform: scaleX(-1);
+        }
+      }
 }
 
 /////////////////////////////////
@@ -249,9 +268,18 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 260px auto;
+    @media screen and (min-width: 1350px) {
+        grid-template-rows: 260px 500px;
+    }
     grid-template-areas: 
         "s-header s-header"
         "column-1 column-2";
+    @media screen and (min-width: 1500px) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "s-header s-header s-header s-header s-header s-header"
+        "........ column-1 column-1 column-2 column-2 ........";
+    }
 
     .services-hearder{
         grid-area: s-header;
@@ -419,6 +447,7 @@ header{
     .sec-hearder{
         display: grid;
         align-items: center;
+        justify-content: center;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 235px;
         padding: 0 72px;

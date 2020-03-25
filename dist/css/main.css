@@ -110,12 +110,19 @@ header {
       position: relative;
       left: 50px;
       bottom: -15px; }
+    @media screen and (min-width: 1500px) {
+      header .column-2 img {
+        left: 50%;
+        transform: translateX(-50%); } }
 
 .how-we-help {
   margin-top: 105px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: max-content; }
+  @media screen and (min-width: 1350px) {
+    .how-we-help {
+      grid-template-columns: 1fr 2fr 1fr; } }
   .how-we-help .column-1 {
     background-image: url(../img/how-we-help-col-1-bg.svg);
     background-size: contain;
@@ -147,6 +154,13 @@ header {
       border-radius: 2.65rem;
       font-weight: 700;
       color: #fd971d; }
+  @media screen and (min-width: 1350px) {
+    .how-we-help .column-3 {
+      background-image: url(../img/how-we-help-col-1-bg.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      transform: scaleX(-1); } }
 
 .services-section {
   margin-top: 50px;
@@ -154,6 +168,13 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 260px auto;
   grid-template-areas: "s-header s-header" "column-1 column-2"; }
+  @media screen and (min-width: 1350px) {
+    .services-section {
+      grid-template-rows: 260px 500px; } }
+  @media screen and (min-width: 1500px) {
+    .services-section {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: "s-header s-header s-header s-header s-header s-header" "........ column-1 column-1 column-2 column-2 ........"; } }
   .services-section .services-hearder {
     grid-area: s-header;
     display: flex;
@@ -271,6 +292,7 @@ header {
   .our-partners-section .sec-hearder {
     display: grid;
     align-items: center;
+    justify-content: center;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 235px;
     padding: 0 72px;
