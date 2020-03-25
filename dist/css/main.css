@@ -21,6 +21,9 @@ nav {
   @media screen and (min-width: 1250px) {
     nav {
       padding: 50px 100px; } }
+  @media screen and (max-width: 700px) {
+    nav {
+      padding: 50px 10px; } }
   nav .logo {
     display: flex;
     align-items: center; }
@@ -53,12 +56,28 @@ nav {
       border-bottom: 1px solid #fd971d; }
     nav .nav-links li:not(:last-of-type) {
       margin-right: 2.2rem; }
+  @media screen and (max-width: 1000px) {
+    nav .nav-links {
+      display: none; }
+    nav .menu-wrapper {
+      display: inline-block; } }
+  @media screen and (min-width: 1001px) {
+    nav .menu-wrapper {
+      display: none; } }
 
 header {
   display: grid;
   margin-top: 28px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto; }
+  @media screen and (max-width: 1000px) {
+    header {
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
+      header .column-2 {
+        display: none; } }
   header .column-2::before {
     content: "";
     width: 70px;
@@ -110,6 +129,10 @@ header {
     @media screen and (min-width: 1200px) {
       header .column-1 .description {
         width: 80%; } }
+    @media screen and (max-width: 1000px) {
+      header .column-1 .description {
+        width: 100%;
+        padding: 0 10px; } }
   header .column-2 {
     background-image: url(../img/header-col-2-bg.svg);
     background-size: contain;
@@ -132,13 +155,32 @@ header {
   @media screen and (min-width: 1350px) {
     .how-we-help {
       grid-template-columns: 1fr 2fr 1fr; } }
+  @media screen and (max-width: 1000px) {
+    .how-we-help {
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center; }
+      .how-we-help .column-2 {
+        width: 80%;
+        margin: 0 auto; }
+      .how-we-help .column-1 {
+        display: none; } }
+  @media screen and (max-width: 700px) {
+    .how-we-help .column-2 {
+      width: 100%; } }
   .how-we-help .column-1 {
     background-image: url(../img/how-we-help-col-1-bg.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center; }
+    @media screen and (min-width: 1350px) {
+      .how-we-help .column-1 {
+        opacity: 0.8; } }
   .how-we-help .column-2 {
     padding: 10px 72px; }
+    @media screen and (max-width: 700px) {
+      .how-we-help .column-2 {
+        padding: 10px; } }
     .how-we-help .column-2 h1 {
       font-size: 2.4rem;
       color: #1e242d;
@@ -165,6 +207,7 @@ header {
       color: #fd971d; }
   @media screen and (min-width: 1350px) {
     .how-we-help .column-3 {
+      opacity: 0.8;
       background-image: url(../img/how-we-help-col-1-bg.svg);
       background-size: contain;
       background-repeat: no-repeat;
@@ -184,12 +227,28 @@ header {
     .services-section {
       grid-template-columns: repeat(6, 1fr);
       grid-template-areas: "s-header s-header s-header s-header s-header s-header" "........ column-1 column-1 column-2 column-2 ........"; } }
+  @media screen and (max-width: 1000px) {
+    .services-section {
+      grid-template-columns: 1fr;
+      grid-template-areas: "s-header" "column-2"; }
+      .services-section .column-2 {
+        width: 80%;
+        margin: 0 auto; }
+      .services-section .column-1 {
+        display: none; } }
+  @media screen and (max-width: 700px) {
+    .services-section .column-2 {
+      width: 100%; } }
   .services-section .services-hearder {
     grid-area: s-header;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    @media screen and (max-width: 1000px) {
+      .services-section .services-hearder {
+        align-items: center;
+        text-align: center; } }
     .services-section .services-hearder h1 {
       font-size: 2.4rem;
       color: #1e242d;
@@ -200,6 +259,9 @@ header {
       display: flex;
       justify-content: space-between;
       padding-bottom: 45px; }
+      @media screen and (max-width: 1000px) {
+        .services-section .services-hearder .services {
+          flex-direction: column; } }
       .services-section .services-hearder .services .service {
         list-style: none;
         display: inline; }
@@ -209,11 +271,18 @@ header {
           font-size: 1.5rem;
           letter-spacing: 1px;
           padding-bottom: 40px; }
+          @media screen and (max-width: 1000px) {
+            .services-section .services-hearder .services .service a {
+              padding-bottom: 8px; } }
         .services-section .services-hearder .services .service .active {
           color: #1e242d;
           border-bottom: 1px solid #fd971d; }
       .services-section .services-hearder .services .service:not(:last-of-type) {
         margin-right: 80px; }
+      @media screen and (max-width: 1000px) {
+        .services-section .services-hearder .services .service:not(:last-of-type) {
+          margin-right: 0px;
+          margin-bottom: 20px; } }
   .services-section .column-1::before {
     content: "";
     width: 70px;
@@ -236,6 +305,9 @@ header {
   .services-section .column-2 {
     grid-area: column-2;
     padding: 10px 72px; }
+    @media screen and (max-width: 700px) {
+      .services-section .column-2 {
+        padding: 10px; } }
     .services-section .column-2 h1 {
       font-size: 2.4rem;
       color: #1e242d;
@@ -323,6 +395,9 @@ header {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         padding-top: 50px; } }
+    @media screen and (max-width: 700px) {
+      .our-partners-section .sec-hearder {
+        padding: 50px 10px 0 10px; } }
     .our-partners-section .sec-hearder .title p {
       text-transform: uppercase;
       font-size: 1.3rem;
@@ -363,6 +438,9 @@ header {
       .our-partners-section .partners {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr); } }
+    @media screen and (max-width: 700px) {
+      .our-partners-section .partners {
+        margin: 10px 10px 0 10px; } }
     .our-partners-section .partners .partner {
       background-color: #fff;
       padding: 45px; }
@@ -406,6 +484,14 @@ footer {
   justify-content: center;
   grid-gap: 40px;
   grid-template-areas: "company primary secondary contact"; }
+  @media screen and (max-width: 950px) {
+    footer {
+      grid-template-areas: "company   primary" "secondary contact"; } }
+  @media screen and (max-width: 500px) {
+    footer {
+      grid-template-areas: "company" "primary " "secondary" "contact";
+      align-items: center;
+      text-align: center; } }
   footer .company-description {
     grid-area: company; }
     footer .company-description .logo {

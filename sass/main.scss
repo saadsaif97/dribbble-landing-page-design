@@ -49,7 +49,12 @@ nav{
     justify-content: space-between;
     @media screen and (min-width: 1250px) {
         padding: 50px 100px;
-      }
+    }
+    @media screen and (max-width: 700px) {
+        padding: 50px 10px;
+    }
+    
+    
 
     .logo{
         display: flex;
@@ -102,6 +107,20 @@ nav{
             margin-right: 2.2rem;
         }
     }
+
+    @media screen and (max-width: 1000px) {
+        .nav-links{
+            display: none;
+        }
+        .menu-wrapper{
+            display: inline-block;
+        }
+    }
+    @media screen and (min-width: 1001px) {
+        .menu-wrapper{
+            display: none;
+        }
+    }
 }
 
 
@@ -114,6 +133,17 @@ header{
     margin-top: 28px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+
+     @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .column-2{
+            display: none;
+        }
+    }
 
     .column-2::before{
         content: "";
@@ -182,6 +212,12 @@ header{
                 width: 80%;
           }
         }
+        @media screen and (max-width: 1000px) {
+            .description{
+                width: 100%;
+                padding: 0 10px;
+            }
+        }  
     }
 
     .column-2{
@@ -199,8 +235,9 @@ header{
               left: 50%;
               transform: translateX(-50%);
             }
-          }
+        }
     }
+    
 }
 
 ///////////////////////////
@@ -216,16 +253,42 @@ header{
     @media screen and (min-width: 1350px) {
        grid-template-columns: 1fr 2fr 1fr;
     }
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+
+        .column-2{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .column-1{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .column-2{
+            width: 100%;
+        }
+    }
+    
 
     .column-1{
         background-image: url(../img/how-we-help-col-1-bg.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: left center;
+        @media screen and (min-width: 1350px) {
+            opacity: 0.8;
+         }
     }
 
     .column-2{
         padding: 10px 72px;
+        @media screen and (max-width: 700px) {
+                padding: 10px;
+        }
         
         h1{
             font-size: 2.4rem;
@@ -261,6 +324,7 @@ header{
     }
     @media screen and (min-width: 1350px) {
         .column-3 {
+            opacity: 0.8;
             background-image: url(../img/how-we-help-col-1-bg.svg);
             background-size: contain;
             background-repeat: no-repeat;
@@ -291,6 +355,26 @@ header{
         "s-header s-header s-header s-header s-header s-header"
         "........ column-1 column-1 column-2 column-2 ........";
     }
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "s-header"
+        "column-2";
+
+        .column-2{
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .column-1{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .column-2{
+            width: 100%;
+        }
+    }
 
     .services-hearder{
         grid-area: s-header;
@@ -298,6 +382,10 @@ header{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        @media screen and (max-width: 1000px) {
+            align-items: center;
+            text-align: center;
+        }
 
         h1{
             font-size: 2.4rem;
@@ -311,6 +399,9 @@ header{
             display: flex;
             justify-content: space-between;
             padding-bottom: 45px;
+            @media screen and (max-width: 1000px) {
+                flex-direction: column;
+            }
 
             .service{
                 list-style: none;
@@ -322,6 +413,9 @@ header{
                     font-size: 1.5rem;
                     letter-spacing: 1px;
                     padding-bottom: 40px;
+                    @media screen and (max-width: 1000px) {
+                        padding-bottom: 8px;
+                    }
                 }
 
                 .active{
@@ -332,6 +426,12 @@ header{
 
             .service:not(:last-of-type){
                 margin-right: 80px;
+            }
+            @media screen and (max-width: 1000px) {
+                .service:not(:last-of-type){
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                }
             }
         }
     }
@@ -364,6 +464,9 @@ header{
     .column-2{
         grid-area: column-2;
         padding: 10px 72px;
+        @media screen and (max-width: 700px) {
+            padding: 10px;
+        }
         
         h1{
             font-size: 2.4rem;
@@ -481,6 +584,9 @@ header{
             grid-template-rows: auto;
             padding-top: 50px;
         }
+        @media screen and (max-width: 700px) {
+            padding: 50px 10px 0 10px;
+        }
 
         .title{
             p{
@@ -533,6 +639,9 @@ header{
         @media screen and (max-width: 950px) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 700px) {
+            margin: 10px 10px 0 10px;
         }
 
         .partner{
@@ -601,6 +710,22 @@ footer{
 
     grid-template-areas: 
      "company primary secondary contact";
+    
+    @media screen and (max-width: 950px) {
+        grid-template-areas: 
+        "company   primary"
+        "secondary contact";
+    }
+
+    @media screen and (max-width: 500px) {
+        grid-template-areas: 
+        "company"
+        "primary "
+        "secondary"
+        "contact";
+        align-items: center;
+        text-align: center;
+    }
 
     .company-description{
         grid-area: company;
