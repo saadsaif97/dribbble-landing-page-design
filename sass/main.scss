@@ -516,3 +516,129 @@ header{
     }
 
 }
+
+
+/////////////////////////////////
+//   FOOTER STYLING
+/////////////////////////////////
+
+
+footer{
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , 250px);
+    grid-template-rows: max-content;
+    align-items: start;
+    justify-content: center;
+    grid-gap: 40px;
+
+    grid-template-areas: 
+     "company primary secondary contact";
+
+    .company-description{
+        grid-area: company;
+
+        .logo{
+            display: flex;
+            align-items: center;
+    
+            img{
+                width: 38px;
+            }
+    
+            .logo-text{
+                color: $orange;
+                font-size: 1.8rem;
+                margin-left: 10px;
+                font-weight: 700;
+            }
+        }
+
+        .description{
+            margin-top: 25px;
+            color: $dark-2;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .btn{
+            margin-top: 25px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 22px 45px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            background-color: $light-pink;
+            text-transform: uppercase;
+            border-radius: 2.65rem;
+            color: $orange;
+        }
+    }
+
+    .links-primary{
+        grid-area: primary;
+        h3{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .links-secondary{
+        grid-area: secondary;
+    }
+
+    .contact{
+        grid-area: contact;
+        h3{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        i{
+            color: $orange;
+            margin-right: 5px;
+            font-size: 1.5rem;
+        }
+
+        li:last-of-type{
+            i{
+                font-size: 2rem;
+                color: #3b5998;
+            }
+        }
+    }
+
+    .links-primary,
+    .links-secondary,
+    .contact{
+            list-style: none;
+
+            a{
+                color: $dark-1;
+                line-height: 1.4;
+                text-decoration: none;
+                font-size: 1.3rem;
+            }
+    }
+
+    .links-primary,
+    .links-secondary,
+    .contact{
+        li:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+    }
+
+    .links-primary,
+    .contact{
+        li:first-of-type{
+            margin-top: 33px;
+        }
+    }
+
+    .links-secondary{
+        li:first-of-type{
+            margin-top: 58px;
+        }
+    }
+}

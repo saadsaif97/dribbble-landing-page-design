@@ -340,3 +340,80 @@ header {
           text-transform: uppercase;
           font-weight: 700;
           letter-spacing: 1px; }
+
+footer {
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-rows: max-content;
+  align-items: start;
+  justify-content: center;
+  grid-gap: 40px;
+  grid-template-areas: "company primary secondary contact"; }
+  footer .company-description {
+    grid-area: company; }
+    footer .company-description .logo {
+      display: flex;
+      align-items: center; }
+      footer .company-description .logo img {
+        width: 38px; }
+      footer .company-description .logo .logo-text {
+        color: #fd971d;
+        font-size: 1.8rem;
+        margin-left: 10px;
+        font-weight: 700; }
+    footer .company-description .description {
+      margin-top: 25px;
+      color: #5f6369;
+      font-size: 1.5rem;
+      letter-spacing: 1px; }
+    footer .company-description .btn {
+      margin-top: 25px;
+      text-decoration: none;
+      display: inline-block;
+      padding: 22px 45px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      background-color: #fff3ea;
+      text-transform: uppercase;
+      border-radius: 2.65rem;
+      color: #fd971d; }
+  footer .links-primary {
+    grid-area: primary; }
+    footer .links-primary h3 {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+  footer .links-secondary {
+    grid-area: secondary; }
+  footer .contact {
+    grid-area: contact; }
+    footer .contact h3 {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    footer .contact i {
+      color: #fd971d;
+      margin-right: 5px;
+      font-size: 1.5rem; }
+    footer .contact li:last-of-type i {
+      font-size: 2rem;
+      color: #3b5998; }
+  footer .links-primary,
+  footer .links-secondary,
+  footer .contact {
+    list-style: none; }
+    footer .links-primary a,
+    footer .links-secondary a,
+    footer .contact a {
+      color: #1e242d;
+      line-height: 1.4;
+      text-decoration: none;
+      font-size: 1.3rem; }
+  footer .links-primary li:not(:last-of-type),
+  footer .links-secondary li:not(:last-of-type),
+  footer .contact li:not(:last-of-type) {
+    margin-bottom: 20px; }
+  footer .links-primary li:first-of-type,
+  footer .contact li:first-of-type {
+    margin-top: 33px; }
+  footer .links-secondary li:first-of-type {
+    margin-top: 58px; }
