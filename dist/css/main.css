@@ -5,16 +5,22 @@
 
 html {
   font-size: 62.5%; }
+  @media screen and (min-width: 1500px) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden; }
 
 nav {
-  padding: 10px 72px;
+  padding: 50px 72px;
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media screen and (min-width: 1250px) {
+    nav {
+      padding: 50px 100px; } }
   nav .logo {
     display: flex;
     align-items: center; }
@@ -101,6 +107,9 @@ header {
           text-transform: uppercase;
           font-weight: 700;
           letter-spacing: 1px; }
+    @media screen and (min-width: 1200px) {
+      header .column-1 .description {
+        width: 80%; } }
   header .column-2 {
     background-image: url(../img/header-col-2-bg.svg);
     background-size: contain;
@@ -288,7 +297,16 @@ header {
 .our-partners-section {
   margin-top: 125px;
   background-color: #f9f6f7;
+  padding-left: 72px;
+  padding-right: 72px;
   padding-bottom: 85px; }
+  @media screen and (min-width: 1350px) {
+    .our-partners-section {
+      padding: 0 85px 85px 85px; } }
+  @media screen and (max-width: 1180px) {
+    .our-partners-section {
+      padding-left: 10px;
+      padding-right: 10px; } }
   .our-partners-section .sec-hearder {
     display: grid;
     align-items: center;
@@ -297,6 +315,14 @@ header {
     grid-template-rows: 235px;
     padding: 0 72px;
     grid-gap: 72px; }
+    @media screen and (max-width: 1180px) {
+      .our-partners-section .sec-hearder {
+        grid-gap: 20px; } }
+    @media screen and (max-width: 850px) {
+      .our-partners-section .sec-hearder {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding-top: 50px; } }
     .our-partners-section .sec-hearder .title p {
       text-transform: uppercase;
       font-size: 1.3rem;
@@ -324,11 +350,19 @@ header {
       border-radius: 2.65rem;
       font-weight: 700;
       color: #fd971d; }
+      @media screen and (max-width: 850px) {
+        .our-partners-section .sec-hearder .btn {
+          width: 200px;
+          margin-bottom: 50px; } }
   .our-partners-section .partners {
     margin: 10px 72px 0 72px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 25px; }
+    @media screen and (max-width: 950px) {
+      .our-partners-section .partners {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr); } }
     .our-partners-section .partners .partner {
       background-color: #fff;
       padding: 45px; }

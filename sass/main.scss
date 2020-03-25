@@ -24,6 +24,9 @@ $dark-2: #5f6369;
 
 html{
     font-size: 62.5%;
+    @media screen and (min-width: 1500px) {
+        font-size: 75%;
+    }
 }
 
 body{
@@ -40,10 +43,13 @@ body{
 //   NAVIGATION STYLING
 ///////////////////////////
 nav{
-    padding: 10px 72px;
+    padding: 50px 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (min-width: 1250px) {
+        padding: 50px 100px;
+      }
 
     .logo{
         display: flex;
@@ -170,6 +176,11 @@ header{
                     letter-spacing: 1px;
                 }
             }
+        }
+        @media screen and (min-width: 1200px) {
+            .description {
+                width: 80%;
+          }
         }
     }
 
@@ -442,7 +453,17 @@ header{
 .our-partners-section{
     margin-top: 125px;
     background-color: $light-gray;
+    padding-left: 72px;
+    padding-right: 72px;
     padding-bottom: 85px;
+    @media screen and (min-width: 1350px) {
+        padding: 0 85px 85px 85px;
+    }
+    @media screen and (max-width: 1180px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
 
     .sec-hearder{
         display: grid;
@@ -452,6 +473,14 @@ header{
         grid-template-rows: 235px;
         padding: 0 72px;
         grid-gap: 72px;
+        @media screen and (max-width: 1180px) {
+            grid-gap: 20px;
+        }
+        @media screen and (max-width: 850px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            padding-top: 50px;
+        }
 
         .title{
             p{
@@ -488,6 +517,10 @@ header{
             border-radius: 2.65rem;
             font-weight: 700;
             color: $orange;
+            @media screen and (max-width: 850px) {
+                width: 200px;
+                margin-bottom: 50px;
+            }
         }
     }
 
@@ -496,6 +529,11 @@ header{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 25px;
+
+        @media screen and (max-width: 950px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
 
         .partner{
             background-color: #fff;
