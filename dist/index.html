@@ -20,9 +20,9 @@
             <p class="logo-text">adapter</p>
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="current">About us</a></li>
-            <li><a href="#">How we help</a></li>
-            <li><a href="#">Our partners</a></li>
+            <li><a href="#how">About us</a></li>
+            <li><a href="#services">How we help</a></li>
+            <li><a href="#partners">Our partners</a></li>
             <li><a href="#" class="btn">Join us now</a></li>
         </ul>
         <div class="menu-wrapper">
@@ -33,9 +33,9 @@
                 <div class="line line-3"></div>
             </div>
             <ul class="menu">
-                <li><a href="#" class="current">About us</a></li>
-                <li><a href="#">How we help</a></li>
-                <li><a href="#">Our partners</a></li>
+                <li><a href="#how">About us</a></li>
+                <li><a href="#services">How we help</a></li>
+                <li><a href="#partners">Our partners</a></li>
                 <li><a href="#" class="btn">Join us now</a></li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
     <!-- HERO AREA ENDS -->
 
     <!-- HOW WE HELP STARTS -->
-    <section class="how-we-help">
+    <section class="how-we-help" id="how">
         <div class="column-1">
 
         </div>
@@ -85,7 +85,7 @@
     <!-- HOW WE HELP ENDS -->
 
     <!-- SERVICES STARTS -->
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="services-hearder">
             <h1>How We Can Help</h1>
             <ul class="services">
@@ -131,7 +131,7 @@
     <!-- SERVICES ENDS -->
 
     <!-- OUR PARTNERS STARTS -->
-    <section class="our-partners-section">
+    <section class="our-partners-section" id="partners">
         <div class="sec-hearder">
             <div class="title">
                 <p>Our Partners</p>
@@ -225,6 +225,35 @@
 
 
     <script src="https://kit.fontawesome.com/8ad8ec53a6.js" crossorigin="anonymous"></script>
+
+    <!-- for smooth scroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </body>
 
 </html>
